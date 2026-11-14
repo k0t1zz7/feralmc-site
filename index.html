@@ -105,6 +105,12 @@ summary::after { content: "+"; font-family: var(--display); font-size: 30px; lin
 details[open] summary::after { content: "\2212"; }
 details p { padding: 0 20px 18px; color: var(--muted); }
 
+.votes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.vote { display: flex; justify-content: space-between; align-items: center; gap: 12px; background: var(--panel); border: 1px solid var(--line); border-left: 6px solid var(--red); padding: 16px 18px; color: var(--text); text-decoration: none; font-weight: 600; font-size: 18px; }
+.vote b { font-family: var(--display); font-size: 22px; text-transform: uppercase; letter-spacing: .03em; background: var(--yellow); color: #0c0c0c; padding: 4px 14px; }
+.vote:hover { border-color: var(--yellow); border-left-color: var(--yellow); }
+.vote:hover b { background: #f5fb6a; }
+
 .join { text-align: center; }
 .join .ip { margin: 26px auto 0; display: inline-flex; font-size: clamp(20px, 5vw, 32px); }
 .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 34px 0; text-align: left; }
@@ -132,6 +138,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 30px; justify-content: 
   <div class="wrap">
     <a class="brand" href="#top"><svg class="logo-nav" viewBox="110 30 340 460" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polygon points="135,50 425,60 215,125 215,300 208,470 190,300" fill="#d7262e"/><polygon points="185,238 380,244 215,305" fill="#e8f03a"/></svg><span>FERAL<b>MC</b></span></a>
     <nav class="links" aria-label="Main">
+      <a href="#vote">Vote</a>
       <a href="#how">How it works</a>
       <a href="#rules">Rules</a>
       <a href="#faq">FAQ</a>
@@ -169,6 +176,21 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 30px; justify-content: 
       <div class="count" id="count">Season starts January 1, 2027</div>
     </div>
   </div>
+
+  <section id="vote">
+    <div class="wrap">
+      <h2>Vote for FeralMC</h2>
+      <p class="sub">Votes push the server up the server lists, so more players can find it. Each list allows one vote per day and takes about ten seconds.</p>
+      <div class="votes">
+        <a class="vote" href="https://minecraft-server-list.com/server/524928/vote/" target="_blank" rel="noopener noreferrer"><span>Minecraft Server List</span><b>Vote</b></a>
+        <a class="vote" href="https://minecraftservers.org/vote/696113" target="_blank" rel="noopener noreferrer"><span>MinecraftServers.org</span><b>Vote</b></a>
+        <a class="vote" href="https://topg.org/minecraft-servers/server-688402" target="_blank" rel="noopener noreferrer"><span>TopG</span><b>Vote</b></a>
+        <a class="vote" href="https://minecraft-mp.com/server/366815/vote/" target="_blank" rel="noopener noreferrer"><span>Minecraft-MP</span><b>Vote</b></a>
+        <a class="vote" href="https://www.planetminecraft.com/server/feralmc/vote/" target="_blank" rel="noopener noreferrer"><span>Planet Minecraft</span><b>Vote</b></a>
+        <a class="vote" href="https://minecraftlist.org/vote/34302" target="_blank" rel="noopener noreferrer"><span>MinecraftList</span><b>Vote</b></a>
+      </div>
+    </div>
+  </section>
 
   <section id="how">
     <div class="wrap">
